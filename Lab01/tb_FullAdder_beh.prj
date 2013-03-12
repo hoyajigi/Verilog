@@ -1,0 +1,3 @@
+verilog work "src/FullAdder.v"
+verilog work "tb/tb_FullAdder.v"
+verilog work "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v"

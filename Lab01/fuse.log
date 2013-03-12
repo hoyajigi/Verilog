@@ -1,21 +1,18 @@
-Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Windows/System32/Lab01/tb_CA_NAND2_isim_beh.exe -prj C:/Windows/System32/Lab01/tb_CA_NAND2_beh.prj work.tb_CA_NAND2 work.glbl 
-ISim P.49d (signature 0x8ef4fb42)
-Number of CPUs detected in this system: 2
-Turning on mult-threading, number of parallel sub-compilation jobs: 4 
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/hlug/Documents/GitHub/Verilog/Lab01/tb_FullAdder_isim_beh.exe -prj C:/Users/hlug/Documents/GitHub/Verilog/Lab01/tb_FullAdder_beh.prj work.tb_FullAdder work.glbl 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Windows/System32/Lab01/src/CA_NAND2.v" into library work
-Analyzing Verilog file "C:/Windows/System32/Lab01/tb/tb_CA_NAND2.v" into library work
+Analyzing Verilog file "C:/Users/hlug/Documents/GitHub/Verilog/Lab01/src/FullAdder.v" into library work
+Analyzing Verilog file "C:/Users/hlug/Documents/GitHub/Verilog/Lab01/tb/tb_FullAdder.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 105976 KB
-Fuse CPU Usage: 312 ms
-Compiling module CA_NAND2
-Compiling module tb_CA_NAND2
+Compiling module FullAdder
+Compiling module tb_FullAdder
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
-Built simulation executable C:/Windows/System32/Lab01/tb_CA_NAND2_isim_beh.exe
-Fuse Memory Usage: 110568 KB
-Fuse CPU Usage: 342 ms
+Built simulation executable C:/Users/hlug/Documents/GitHub/Verilog/Lab01/tb_FullAdder_isim_beh.exe
+Fuse Memory Usage: 30068 KB
+Fuse CPU Usage: 374 ms

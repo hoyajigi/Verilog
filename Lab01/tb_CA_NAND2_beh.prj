@@ -1,3 +1,0 @@
-verilog work "src/CA_NAND2.v"
-verilog work "tb/tb_CA_NAND2.v"
-verilog work "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v"
