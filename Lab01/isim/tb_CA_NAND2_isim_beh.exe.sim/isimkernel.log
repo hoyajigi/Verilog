@@ -1,0 +1,10 @@
+Command line:
+   tb_CA_NAND2_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50175
+
+Tue Mar 12 11:32:36 2013
+
+
+ Elaboration Time: 0.078 sec

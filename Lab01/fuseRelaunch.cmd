@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Windows/System32/Lab01/tb_CA_NAND2_isim_beh.exe" -prj "C:/Windows/System32/Lab01/tb_CA_NAND2_beh.prj" "work.tb_CA_NAND2" "work.glbl" 

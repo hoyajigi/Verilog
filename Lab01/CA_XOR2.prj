@@ -1,0 +1,2 @@
+verilog work "tb/CA_OR2.v"
+verilog work "src/CA_XOR2.v"
