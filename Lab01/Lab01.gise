@@ -37,6 +37,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Decoder4.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Decoder4.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Decoder4.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Decoder8.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Decoder8.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Decoder8.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FullAdder.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="FullAdder.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="FullAdder.xst"/>
@@ -66,6 +69,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="src/CA_3_Buf.v"/>

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-03-12T18:43:39</DateModified>
+  <DateModified>2013-03-14T09:02:14</DateModified>
   <ModuleName>CA_NOR2</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/hlug/Documents/GitHub/Verilog/Lab01/iseconfig/CA_NOR2.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/hlug/Documents/GitHub/Verilog/Lab01</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/hlug/Documents/GitHub/Verilog/Lab01\</ImplementationReportsDirectory>
   <DateInitialized>2013-03-12T18:43:39</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
