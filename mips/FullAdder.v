@@ -28,5 +28,4 @@ module FullAdder(
 	
 	always @(posedge clk)// or negedge rst)
 		Out=In+32'b00000000_00000000_00000000_00000100;
-
 endmodule
