@@ -1,0 +1,8 @@
+[Inputs]
+=In[31:0]=
+[Outputs]
+=Out[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel FullAdder
+

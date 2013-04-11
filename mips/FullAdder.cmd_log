@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/hlug/Documents/GitHub/Verilog/mips/FullAdder.v -lang verilog -prj mips -o FullAdder.spl -module FullAdder -template C:/Xilinx/14.4/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 FullAdder.spl C:/Users/hlug/Documents/GitHub/Verilog/mips/FullAdder.sym 

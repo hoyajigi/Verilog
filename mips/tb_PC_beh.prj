@@ -1,0 +1,5 @@
+verilog work "Reg_PC.v"
+verilog work "Mux2.v"
+verilog work "FullAdder.v"
+verilog work "tb_PC.v"
+verilog work "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v"
