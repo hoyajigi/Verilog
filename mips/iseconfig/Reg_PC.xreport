@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-04-11T08:20:06</DateModified>
+  <DateModified>2013-05-02T21:38:53</DateModified>
   <ModuleName>Reg_PC</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>C:/Users/hlug/Documents/GitHub/Verilog/mips/iseconfig/Reg_PC.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/hlug/Documents/GitHub/Verilog/mips</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/hlug/Documents/GitHub/Verilog/mips\</ImplementationReportsDirectory>
   <DateInitialized>2013-04-11T08:09:32</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
