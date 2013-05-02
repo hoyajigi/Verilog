@@ -5,10 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hlug/Documents/GitHub/Verilog/mips/Mux2.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">Out</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hlug/Documents/GitHub/Verilog/mips/Registers.v" Line 33: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData1</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hlug/Documents/GitHub/Verilog/mips/FullAdder.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">Out</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hlug/Documents/GitHub/Verilog/mips/Registers.v" Line 34: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData2</arg> is not allowed
 </msg>
 
 </messages>
