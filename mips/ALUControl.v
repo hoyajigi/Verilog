@@ -33,20 +33,20 @@ module ALUControl(
 			//ADD
 			6'b100000:Control=3'b000;
 			//SUB
-			6'b100010:Control=3'b000;
+			6'b100010:Control=3'b001;
 			//AND
-			6'b100100:Control=3'b000;
+			6'b100100:Control=3'b010;
 			//OR
-			6'b100101:Control=3'b000;
+			6'b100101:Control=3'b011;
 			//SLT
-			6'b100000:Control=3'b000;
+			6'b100000:Control=3'b100;
 			endcase
 		//Sw
-		2'b01:Control=3'b000;
+		2'b01:Control=3'b101;
 		//Lw
-		2'b10:Control=3'b000;
+		2'b10:Control=3'b110;
 		//Beq
-		2'b11:Control=3'b000;
+		2'b11:Control=3'b111;
 		endcase
 	end
 
