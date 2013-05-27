@@ -22,6 +22,12 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="mips.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALU.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALU.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ALU.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALUControl.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALUControl.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ALUControl.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Adder.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Adder.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Adder.lso"/>
@@ -55,6 +61,9 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Adder_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="Adder_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Adder_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ControlUnit.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ControlUnit.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ControlUnit.xst"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="FullAdder.spl"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FullAdder_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2_stx_beh.prj"/>
@@ -103,6 +112,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Adder.v"/>
@@ -209,6 +219,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Adder.lso"/>
