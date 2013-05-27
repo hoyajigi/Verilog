@@ -1,0 +1,15 @@
+[Inputs]
+clk
+rst
+write
+=ReadRegister1[4:0]=
+=ReadRegister2[4:0]=
+=WriteRegister[4:0]=
+=WriteData[31:0]=
+[Outputs]
+=ReadData1[31:0]=
+=ReadData2[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Registers
+

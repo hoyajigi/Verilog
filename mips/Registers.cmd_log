@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/hlug/Documents/GitHub/Verilog/mips/Registers.v -lang verilog -prj mips -o Registers.spl -module Registers -template C:/Xilinx/14.4/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Registers.spl C:/Users/hlug/Documents/GitHub/Verilog/mips/Registers.sym 

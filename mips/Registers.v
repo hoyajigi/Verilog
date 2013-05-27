@@ -20,6 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Registers(
 	 input clk,
+	 input rst,
 	 input write,
     input [4:0] ReadRegister1,
     input [4:0] ReadRegister2,
@@ -32,6 +33,10 @@ module Registers(
 	reg[31:0] regs[0:31];
 	reg[31:0] ReadData1;
 	reg[31:0] ReadData2;
+
+	integer i;
+
+	//TODO: 0번 레지스터 일 경우 0을 출력하고 0번 레지스터에는 쓰기가 되지 않는다.
 	
 	always @(negedge clk & write)
 		regs[WriteRegister]=WriteData;
@@ -41,6 +46,11 @@ module Registers(
 	always @(ReadRegister2 or write)
 		ReadData2=regs[ReadRegister2];
 	
-	
+	always @(negedge rst)
+	begin
+		if(!rst)
+			for(i=0; i<32; i=i+1)
+				regs[i] <= 32'd0;
+	end
 	
 endmodule

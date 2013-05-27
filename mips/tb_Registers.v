@@ -26,6 +26,7 @@ module tb_Registers;
 
 	// Inputs
 	reg clk;
+	reg rst;
 	reg write;
 	reg [4:0] ReadRegister1;
 	reg [4:0] ReadRegister2;
@@ -38,7 +39,8 @@ module tb_Registers;
 
 	// Instantiate the Unit Under Test (UUT)
 	Registers uut (
-		.clk(clk), 
+		.clk(clk),
+		.rst(rst),
 		.write(write), 
 		.ReadRegister1(ReadRegister1), 
 		.ReadRegister2(ReadRegister2), 
@@ -55,6 +57,7 @@ module tb_Registers;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
+		rst = 0;
 		write = 0;
 		ReadRegister1 = 0;
 		ReadRegister2 = 0;
