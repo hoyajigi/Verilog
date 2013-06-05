@@ -35,7 +35,7 @@ module DataMemory(clk,ReadMem,WriteMem,Addr,Data_i,Data,TestPort);
 	always @(posedge clk)
 	begin
 		if(WriteMem)
-			Mem[Addr] = Data_i;
+			Mem[Addr] <= Data_i;
 	end
 
 	always @(posedge clk)
