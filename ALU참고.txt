@@ -1,0 +1,140 @@
+/*
+-----------------------------------------------------------------------
+    Title : 32-bit Arithmetic Logic Unit using RCA
+      File  : alu_32bit.v
+-----------------------------------------------------------------------
+      Author     : Oh,Hyung-Tak
+      Organization : Kwangwoon university
+      Created    : 2007.4.30
+      Last update  : 2007.5.15
+      Platform    : WINDOWS XP
+      Simulators  : Quartus II 6.0
+      Synthesizers : Quartus II 6.0
+      Target     : Cyclone II:AUTO
+-----------------------------------------------------------------------
+      Descriptions       : 32bit ALU를 설계합니다.
+      Revisions Number    : 1
+      Version          : 1.0
+      Date of change      : 2007.5.17
+      Modifier          : Oh, Hyung-Tak ( ohyung@ohyung.com )
+      Description of change :
+-------------------------------------------------------------------------
+*/
+
+module alu_32bit (in_a, in_b, alu_op, result, carryout, overflow, zero);
+    input  [31:0] in_a, in_b;
+    input  [2:0] alu_op;
+
+    output      zero, overflow, carryout;
+    output [31:0] result;
+
+    wire       binvert;
+    wire   [1:0] operation;
+    wire  [31:0] c;
+    wire       w_set, w_overflow;
+    wire       w_lessthan;
+
+    assign w_lessthan = 0;
+    assign binvert = alu_op[2];
+    assign operation[1:0] = alu_op[1:0];
+    assign zero = (result)? 1'b0 : 1'b1;
+
+    alu_unit u0 (in_a[0], in_b[0], binvert, w_set, binvert, operation[1:0], result[0], c[0]);
+    alu_unit u1 (in_a[1], in_b[1], c[0], w_lessthan, binvert, operation[1:0], result[1], c[1]);
+    alu_unit u2 (in_a[2], in_b[2], c[1], w_lessthan, binvert, operation[1:0], result[2], c[2]);
+    alu_unit u3 (in_a[3], in_b[3], c[2], w_lessthan, binvert, operation[1:0], result[3], c[3]);
+    alu_unit u4 (in_a[4], in_b[4], c[3], w_lessthan, binvert, operation[1:0], result[4], c[4]);
+    alu_unit u5 (in_a[5], in_b[5], c[4], w_lessthan, binvert, operation[1:0], result[5], c[5]);
+    alu_unit u6 (in_a[6], in_b[6], c[5], w_lessthan, binvert, operation[1:0], result[6], c[6]);
+    alu_unit u7 (in_a[7], in_b[7], c[6], w_lessthan, binvert, operation[1:0], result[7], c[7]);
+    alu_unit u8 (in_a[8], in_b[8], c[7], w_lessthan, binvert, operation[1:0], result[8], c[8]);
+    alu_unit u9 (in_a[9], in_b[9], c[8], w_lessthan, binvert, operation[1:0], result[9], c[9]);
+    alu_unit u10 (in_a[10], in_b[10], c[9], w_lessthan, binvert, operation[1:0], result[10], c[10]);
+    alu_unit u11 (in_a[11], in_b[11], c[10], w_lessthan, binvert, operation[1:0], result[11], c[11]);
+    alu_unit u12 (in_a[12], in_b[12], c[11], w_lessthan, binvert, operation[1:0], result[12], c[12]);
+    alu_unit u13 (in_a[13], in_b[13], c[12], w_lessthan, binvert, operation[1:0], result[13], c[13]);
+    alu_unit u14 (in_a[14], in_b[14], c[13], w_lessthan, binvert, operation[1:0], result[14], c[14]);
+    alu_unit u15 (in_a[15], in_b[15], c[14], w_lessthan, binvert, operation[1:0], result[15], c[15]);
+    alu_unit u16 (in_a[16], in_b[16], c[15], w_lessthan, binvert, operation[1:0], result[16], c[16]);
+    alu_unit u17 (in_a[17], in_b[17], c[16], w_lessthan, binvert, operation[1:0], result[17], c[17]);
+    alu_unit u18 (in_a[18], in_b[18], c[17], w_lessthan, binvert, operation[1:0], result[18], c[18]);
+    alu_unit u19 (in_a[19], in_b[19], c[18], w_lessthan, binvert, operation[1:0], result[19], c[19]);
+    alu_unit u20 (in_a[20], in_b[20], c[19], w_lessthan, binvert, operation[1:0], result[20], c[20]);
+    alu_unit u21 (in_a[21], in_b[21], c[20], w_lessthan, binvert, operation[1:0], result[21], c[21]);
+    alu_unit u22 (in_a[22], in_b[22], c[21], w_lessthan, binvert, operation[1:0], result[22], c[22]);
+    alu_unit u23 (in_a[23], in_b[23], c[22], w_lessthan, binvert, operation[1:0], result[23], c[23]);
+    alu_unit u24 (in_a[24], in_b[24], c[23], w_lessthan, binvert, operation[1:0], result[24], c[24]);
+    alu_unit u25 (in_a[25], in_b[25], c[24], w_lessthan, binvert, operation[1:0], result[25], c[25]);
+    alu_unit u26 (in_a[26], in_b[26], c[25], w_lessthan, binvert, operation[1:0], result[26], c[26]);
+    alu_unit u27 (in_a[27], in_b[27], c[26], w_lessthan, binvert, operation[1:0], result[27], c[27]);
+    alu_unit u28 (in_a[28], in_b[28], c[27], w_lessthan, binvert, operation[1:0], result[28], c[28]);
+    alu_unit u29 (in_a[29], in_b[29], c[28], w_lessthan, binvert, operation[1:0], result[29], c[29]);
+    alu_unit u30 (in_a[30], in_b[30], c[29], w_lessthan, binvert, operation[1:0], result[30], c[30]);
+    alu_unit_msb u31 (in_a[31], in_b[31], c[30], w_lessthan, binvert, operation[1:0], result[31], carryout, w_set, overflow);
+
+endmodule
+
+
+module alu_unit_msb (in_a, in_b, carryin, less, binvert, operation, result, carryout, set, overflow);
+    input      in_a, in_b, carryin, less;
+    input      binvert;
+    input  [1:0] operation;
+    output     result, set, overflow;
+    output     carryout;
+    reg             result;
+
+    wire      w_sel_b;
+    wire      w_mux_in0, w_mux_in1, w_mux_in2;
+
+    assign w_sel_b=(!binvert)? in_b : ~in_b;
+
+    assign w_mux_in0 = in_a & w_sel_b;
+    assign w_mux_in1 = in_a | w_sel_b;
+    assign w_mux_in2 = in_a ^ w_sel_b ^ carryin;
+
+    assign carryout = (in_a & w_sel_b) | (in_a & carryin) | (w_sel_b & carryin);
+    assign set = w_mux_in2;
+    assign overflow = ~( in_a ^ w_sel_b ) & ( in_a ^ result );
+
+    always @ (operation)
+    begin
+        case (operation)
+            0 : result = w_mux_in0;
+            1 : result = w_mux_in1;
+            2 : result = w_mux_in2;
+            3 : result = less;
+        endcase
+    end
+endmodule
+
+
+module alu_unit (in_a, in_b, carryin, less, binvert, operation, result, carryout);
+    input      in_a, in_b, carryin, less;
+    input      binvert;
+    input  [1:0] operation;
+    output     result, carryout;
+
+    reg             result;
+
+    wire      w_sel_b;
+    wire      w_mux_in0, w_mux_in1, w_mux_in2;
+
+    assign w_sel_b=(!binvert)? in_b : ~in_b;
+
+    assign w_mux_in0 = in_a & w_sel_b;
+    assign w_mux_in1 = in_a | w_sel_b;
+    assign w_mux_in2 = in_a ^ w_sel_b ^ carryin;
+
+    assign carryout = (in_a & w_sel_b) | (in_a & carryin) | (w_sel_b & carryin);
+
+    always @ (operation)
+    begin
+        case (operation)
+            0 : result = w_mux_in0;
+            1 : result = w_mux_in1;
+            2 : result = w_mux_in2;
+            3 : result = less;
+        endcase
+    end
+
+endmodule

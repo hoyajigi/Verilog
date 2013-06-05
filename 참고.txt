@@ -1,0 +1,331 @@
+/*
+-----------------------------------------------------------------------
+    Title : small MIPS Processor
+      File  : mips.v
+-----------------------------------------------------------------------
+      Author     : Oh,Hyung-Tak
+      Organization : Kwangwoon university
+      Created    : 2007.4.30
+      Last update  : 2007.5.21
+      Platform    : WINDOWS XP
+      Simulators  : Quartus II 6.0
+      Synthesizers : Quartus II 6.0
+      Target     : Cyclone II:AUTO
+-----------------------------------------------------------------------
+      Descriptions       : sMIPS를 설계합니다.
+      Revisions Number    : 1
+      Version          : 1.0
+      Date of change      : 2007.5.21
+      Modifier          : Oh,Hyung-Tak ( ohyung@ohyung.com )
+      Description of change :
+-------------------------------------------------------------------------
+*/
+
+//mips top moudle
+module mips ( clk, rst_n, oRegDst, oBranch, oMemRead, oMemtoReg, oALUOp,
+              oMemWrite, oALUSrc, oRegWrite, oJump, oAluResult, oInst, oWePC, oCurPC, oNxtPC,
+              oRead1Reg, oRead2Reg, oWriteReg, oReadData1, oReadData2, oWriteDataReg, oAddress, oWriteData, oReadData);
+    input           clk, rst_n;
+
+    output          oRegDst, oBranch, oMemRead, oMemtoReg, oMemWrite, oALUSrc, oRegWrite, oJump, oWePC;
+    output [01:0] oALUOp;
+    output [04:0] oRead1Reg, oRead2Reg, oWriteReg;
+    output [07:0] oAddress;
+    output [31:0] oAluResult, oInst, oCurPC, oNxtPC,
+                  oWriteDataReg, oReadData1, oReadData2, oWriteData, oReadData;
+
+    wire        RegDst, Branch, MemRead, ALUSrc;
+
+    wire        we_pc;
+    wire [31:0] cur_pc, next_pc;
+
+    wire [31:0]    inc_adder_pc, adr_adder_pc;
+    assign         inc_adder_pc = 32'h00000004;
+
+    wire [31:0]    extended_inst;
+
+    wire [31:0] sft_2_v;
+
+    wire        carryout_adder_pc, carryout_adder_pc2;
+    wire [31:0] newadr_adder_pc2;
+
+    wire         PCSrc;
+
+    wire [27:0] sfted_adr;
+
+    wire [31:0] jump_address;
+
+    wire        Jump;
+    wire [31:0] next_mux_out;
+
+    wire        we_inst_mem;
+    wire [31:0] adr_inst_mem, inst_inst_mem;
+
+    wire        RegWrite; 
+    wire [04:0] writeregister_reg_file;    
+    wire [31:0] writedata_reg_file, readdata1_reg_file, readdata2_reg_file; 
+
+
+    wire        carryout_alu, overflow_alu, Zero; 
+    wire [1:0]  ALUOp;
+    wire [2:0]    control_alu;    
+    wire [31:0] in2_alu, result_alu;    
+
+    wire [31:0] writedata_data_mem, readdata_data_mem;    
+    wire         MemWrite;    
+
+    wire         MemtoReg;    
+
+    assign oWePC = we_pc;
+    assign oRegDst = RegDst;
+    assign oBranch = Branch;
+    assign oMemRead = MemRead;
+    assign oMemtoReg = MemtoReg;
+    assign oALUOp = ALUOp;
+    assign oMemWrite = MemWrite;
+    assign oALUSrc = ALUSrc;
+    assign oRegWrite = RegWrite;
+    assign oJump = Jump;
+
+    assign oInst = inst_inst_mem;
+    assign oAluResult = result_alu;
+    assign oCurPC = cur_pc;
+    assign oNxtPC = next_pc;
+
+    assign oRead1Reg = inst_inst_mem[25:21];
+    assign oRead2Reg = inst_inst_mem[20:16];
+    assign oWriteReg = writeregister_reg_file;
+    assign oWriteDataReg = writedata_reg_file;
+    assign oReadData1 = readdata1_reg_file;
+    assign oReadData2 = readdata2_reg_file;
+
+    assign oAddress = result_alu[7:0];
+    assign oWriteData = readdata2_reg_file;
+    assign oReadData = readdata_data_mem;
+
+    reg_32bit PC ( clk, rst_n, we_pc, next_pc, cur_pc);
+    rca_32bit PC_NEXT_1 ( carryout_adder_pc, adr_adder_pc,
+                            cur_pc, inc_adder_pc, 1'b0 );
+
+    shift_26bit_to_28bit SFT_LEFT_0 (inst_inst_mem[25:0], sfted_adr);
+
+    assign jump_address = {adr_adder_pc[31:28],sfted_adr};
+
+    assign PCSrc = Branch & Zero;
+
+    shift32bit_left_2bit SHIFT_LEFT_1 (extended_inst, sft_2_v);
+
+    rca_32bit Adder_PC2 (carryout_adder_pc2, newadr_adder_pc2,
+                        adr_adder_pc, sft_2_v, 1'b0);
+
+    mux32bit_2to1 Mux_Next_PC (adr_adder_pc, newadr_adder_pc2,
+                             PCSrc, next_mux_out);
+
+    mux32bit_2to1 Mux_Jump (next_mux_out, jump_address, Jump, next_pc);
+
+    inst_rom Inst_Mem (cur_pc[7:0],inst_inst_mem);
+
+    mux5bit_2to1 Mux_Write_Reg (inst_inst_mem[20:16], inst_inst_mem[15:11],
+                     RegDst, writeregister_reg_file);
+
+    reg_files Register_Files (clk, rst_n, RegWrite,
+                            inst_inst_mem[25:21], inst_inst_mem[20:16],
+                            writeregister_reg_file, writedata_reg_file,
+                            readdata1_reg_file, readdata2_reg_file);
+
+    sign_extend SIGN_EXTEND_0 (inst_inst_mem[15:0], extended_inst);
+
+    mux32bit_2to1 ALU_input2_0 (readdata2_reg_file, extended_inst, ALUSrc, in2_alu);
+
+    alu_control ALU_CONTROL ( inst_inst_mem[5:0], ALUOp, control_alu);
+
+    alu_32bit ALU ( readdata1_reg_file, in2_alu,
+                    control_alu, result_alu, carryout_alu, overflow_alu, Zero);
+
+    data_ram Data_Mem ( result_alu[7:0], clk, rst_n, readdata2_reg_file,
+                        MemWrite, readdata_data_mem);
+
+    mux32bit_2to1 DATA_MEMORY_OUTPUT( result_alu, readdata_data_mem, MemtoReg, writedata_reg_file);
+
+    mips_control MIPS_CONTROL (clk, rst_n, inst_inst_mem[31:26], we_pc,
+                                 RegDst, Branch, MemRead, MemtoReg, ALUOp,
+                                MemWrite, ALUSrc, RegWrite, Jump );
+endmodule
+
+
+module mux5bit_2to1(in0, in1, sel, out_mux);
+    input            sel;
+    input  [4:0] in0, in1;
+
+    output [4:0] out_mux;
+    reg   [31:0] out_mux;
+
+    always @ (sel or in0 or in1)
+    begin
+        case (sel)
+            0 : out_mux = in0;
+            1 : out_mux = in1;
+            default : out_mux = 32'b0;
+        endcase
+    end
+endmodule
+
+
+module mux32bit_2to1(in0, in1, sel, out_mux);
+    input            sel;
+    input  [31:0] in0, in1;
+
+    output [31:0] out_mux;
+    reg   [31:0] out_mux;
+
+    always @ (sel or in0 or in1)
+    begin
+        case (sel)
+            0 : out_mux = in0;
+            1 : out_mux = in1;
+            default : out_mux = 32'b0;
+        endcase
+    end
+endmodule
+
+
+module sign_extend (in_d, out_d);
+    input  [15:0] in_d;
+    output [31:0] out_d;
+
+    assign out_d = { {16{in_d[15]}} , in_d };
+endmodule
+
+
+module shift_26bit_to_28bit (in_d, out_d);
+    input  [25:0] in_d;
+    output [27:0] out_d;
+
+    assign out_d = in_d<<2;
+endmodule
+
+
+module shift32bit_left_2bit (in_d, out_d);
+    input  [31:0] in_d;
+    output [31:0] out_d;
+
+    assign out_d = in_d<<2;
+
+endmodule
+
+
+module alu_control ( inst, control, out_sig );
+    input  [1:0] control;
+    input  [5:0] inst;
+
+    output [2:0] out_sig;
+
+    assign out_sig[0] = control[1]&(inst[0]|inst[3]);
+    assign out_sig[1] = ~inst[2]|~control[1];
+    assign out_sig[2] = control[0]|(control[1]&inst[1]);
+endmodule
+
+
+module mips_control ( clk, rst_n, inst, we_pc, regdst, branch, memread, memtoreg, aluop, memwrite, alusrc, regwrite, jump);
+    input              clk, rst_n;
+    input        [5:0] inst;
+
+    output reg          memwrite,regwrite;
+    output reg         we_pc, regdst, branch, memread, memtoreg,alusrc,jump;
+    output reg [1:0] aluop;
+
+    always @ (negedge clk or negedge rst_n)
+    begin
+        if(rst_n == 1'b0) begin
+            memwrite = 1'b0;
+            regwrite = 1'b0;
+        end
+        else begin
+            case(inst)
+                35 : begin
+                    memwrite = 1'b0;
+                    regwrite = 1'b1;
+                end
+                0 : begin
+                    memwrite = 1'b0;
+                    regwrite = 1'b1;
+                end
+                43 : begin
+                    memwrite = 1'b1;
+                    regwrite = 1'b0;
+                end
+                default : begin
+                    memwrite = 1'b0;
+                    regwrite = 1'b0;
+                end
+            endcase
+        end
+    end
+
+    always @ (inst)
+    begin
+        we_pc = 1'b1;
+            case (inst)
+            0  :
+            begin
+                regdst = 1'b1;
+                alusrc = 1'b0;
+                memtoreg = 1'b0;
+                memread = 1'b0;
+                branch = 1'b0;
+                aluop = 2'b10;
+                jump = 1'b0;
+            end
+            2  :
+            begin
+                regdst = 1'b0;
+                alusrc = 1'b0;
+                memtoreg = 1'b0;
+                memread = 1'b0;
+                branch = 1'b0;
+                aluop = 2'b00;
+                jump = 1'b1;
+            end
+            4  :
+            begin
+                regdst = 1'bx;
+                alusrc = 1'b0;
+                memtoreg = 1'bx;
+                memread = 1'b0;
+                branch = 1'b1;
+                aluop = 2'b01;
+                jump = 1'b0;
+            end
+            35 :
+            begin
+                regdst = 1'b0;
+                alusrc = 1'b1;
+                memtoreg = 1'b1;
+                memread = 1'b1;
+                branch = 1'b0;
+                aluop = 2'b00;
+                jump = 1'b0;
+            end
+            43 :
+            begin
+                regdst = 1'bx;
+                alusrc = 1'b1;
+                memtoreg = 1'b1;
+                memread = 1'b0;
+                branch = 1'b0;
+                aluop = 2'b00;
+                jump = 1'b0;
+            end
+            default :
+            begin
+                regdst = 1'b0;
+                branch = 1'b0;
+                memread = 1'b0;
+                memtoreg = 1'b0;
+                alusrc = 1'b0;
+                jump = 1'b0;
+                aluop = 2'b00;
+            end
+        endcase
+    end
+endmodule
