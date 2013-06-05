@@ -1,0 +1,29 @@
+Result 폴더에 캡쳐되어있는 파일은 결과를 캡쳐한 것입니다.
+
+Allthing
+ - 5-Stage Pipelined MIPS + Forwarding + Stall
+
+Forwarding
+ - 5-Stage Pipelined MIPS + Forwarding
+
+Nothing
+ - 5-Stage Pipelined MIPS
+
+
+TestPort는 DataMemory에서 나오게 만든 Test를 위한 Port입니다.
+cnt는 값이 언제 나오는지 알기 위한 매 Clock마다 수를 센 값입니다.
+
+자신의 설계가 올바르다면,
+tb_MIPS_Datapath.v 를 가지고 TestBench를 실행하였을때
+캡쳐한것과 똑같은 결과가 나올 것입니다.
+(단, Forwarding만 구현한 경우, 구현방식에 따라 cnt 값이 캡쳐값+2 될수도 있습니다.)
+
+MIPS 모듈의 Input Output 포트는
+tb_MIPS_Datapath.v 파일에 정의된대로 만들어야 올바르게 실행됩니다.
+
+
+
+
+
+만약 캡쳐한 값과 자신의 테스트 값이 달라도 너무 다를시,
+메일을 주세요. 설계의 차이 때문에 다를 가능성이 아주 조금 있습니다.
