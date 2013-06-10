@@ -1,0 +1,9 @@
+[Inputs]
+clk
+rst
+[Outputs]
+=TestPort[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel MIPS_Datapath
+

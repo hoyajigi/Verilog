@@ -1,0 +1,5 @@
+verilog work "Registers.v"
+verilog work "InstructionMemory.v"
+verilog work "DataMemory.v"
+verilog work "MIPS_Datapath.v"
+verilog work "tb_MIPS_Datapath.v"

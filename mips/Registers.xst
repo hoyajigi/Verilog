@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/hlug/Documents/GitHub/Verilog/mips/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/hlug/Documents/GitHub/Verilog/mips/xst"
+set -tmpdir "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/xst"
 run -compileonly yes
 -p xc7a100t-3-csg324
 -top Registers

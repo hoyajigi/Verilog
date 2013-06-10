@@ -66,9 +66,43 @@
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ControlUnit.xst"/>
     <file xil_pn:fileType="FILE_SPL" xil_pn:name="FullAdder.spl"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="FullAdder_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MIPS_Datapath.prj"/>
-    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MIPS_Datapath.stx"/>
-    <file xil_pn:fileType="FILE_XST" xil_pn:name="MIPS_Datapath.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="MIPS_Datapath.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="MIPS_Datapath.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="MIPS_Datapath.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="MIPS_Datapath.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="MIPS_Datapath.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="MIPS_Datapath.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="MIPS_Datapath.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="MIPS_Datapath.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="MIPS_Datapath.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="MIPS_Datapath.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MIPS_Datapath.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="MIPS_Datapath.ptwx"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="MIPS_Datapath.spl"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="MIPS_Datapath.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="MIPS_Datapath.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="MIPS_Datapath.syr"/>
+    <file xil_pn:fileType="FILE_VERILOG_INSTTEMPLATE" xil_pn:name="MIPS_Datapath.tfi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="MIPS_Datapath.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="MIPS_Datapath.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="MIPS_Datapath.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="MIPS_Datapath.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="MIPS_Datapath.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MIPS_Datapath_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="MIPS_Datapath_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MIPS_Datapath_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MIPS_Datapath_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="MIPS_Datapath_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="MIPS_Datapath_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MIPS_Datapath_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MIPS_Datapath_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="MIPS_Datapath_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="MIPS_Datapath_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MIPS_Datapath_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MIPS_Datapath_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="MIPS_Datapath_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="MIPS_Datapath_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MIPS_Datapath_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Mux2_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Reg_PC_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Registers.prj"/>
@@ -91,6 +125,13 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tb_LeftShifter_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="tb_MIPS_Datapath.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="tb_MIPS_Datapath.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_MIPS_Datapath.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="tb_MIPS_Datapath.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="tb_MIPS_Datapath.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="tb_MIPS_Datapath_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="tb_MIPS_Datapath_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tb_PC_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tb_PC_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="tb_PC_isim_beh.wdb"/>
@@ -172,92 +213,102 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1367499661" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="6426890535693751477" xil_pn:start_ts="1367499661">
+    <transform xil_pn:end_ts="1370872821" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-8481891898774324556" xil_pn:start_ts="1370872821">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1367499661" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-9219050329683685155" xil_pn:start_ts="1367499661">
+    <transform xil_pn:end_ts="1370872821" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-5726845659675520388" xil_pn:start_ts="1370872821">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1367499661" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1367499661">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1367499661" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-3987296395608144361" xil_pn:start_ts="1367499661">
+    <transform xil_pn:end_ts="1370872821" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-6985818649641914858" xil_pn:start_ts="1370872821">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1367499661" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1367499661">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1367499661" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-8413009426523299929" xil_pn:start_ts="1367499661">
+    <transform xil_pn:end_ts="1370872821" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="6776236865507560262" xil_pn:start_ts="1370872821">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1367499676" xil_pn:in_ck="-5533398025966433960" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-1401088921118197766" xil_pn:start_ts="1367499661">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputChanged"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1367499676" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4066557905333534274" xil_pn:start_ts="1367499676">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-    </transform>
-    <transform xil_pn:end_ts="1367499687" xil_pn:in_ck="95811640926342" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="6637719583721057774" xil_pn:start_ts="1367499676">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
-    </transform>
-    <transform xil_pn:end_ts="1367499718" xil_pn:in_ck="95811640926343" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1367499687">
+    <transform xil_pn:end_ts="1370873802" xil_pn:in_ck="5011908195934739907" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="6044080911617841849" xil_pn:start_ts="1370873746">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Adder.ngr"/>
+      <outfile xil_pn:name="MIPS_Datapath.lso"/>
+      <outfile xil_pn:name="MIPS_Datapath.ngc"/>
+      <outfile xil_pn:name="MIPS_Datapath.ngr"/>
+      <outfile xil_pn:name="MIPS_Datapath.prj"/>
+      <outfile xil_pn:name="MIPS_Datapath.stx"/>
+      <outfile xil_pn:name="MIPS_Datapath.syr"/>
+      <outfile xil_pn:name="MIPS_Datapath.xst"/>
+      <outfile xil_pn:name="MIPS_Datapath_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1367499753" xil_pn:in_ck="2944574663545740064" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1367499718">
+    <transform xil_pn:end_ts="1370874120" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5247317175693700671" xil_pn:start_ts="1370874120">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1367499753" xil_pn:in_ck="95811640926211" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1367499739">
+    <transform xil_pn:end_ts="1370874127" xil_pn:in_ck="7426937407841662667" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="7001750583340702029" xil_pn:start_ts="1370874120">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="NotReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="MIPS_Datapath.bld"/>
+      <outfile xil_pn:name="MIPS_Datapath.ngd"/>
+      <outfile xil_pn:name="MIPS_Datapath_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1370874144" xil_pn:in_ck="-8128458291936454419" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1370874127">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="MIPS_Datapath.pcf"/>
+      <outfile xil_pn:name="MIPS_Datapath_map.map"/>
+      <outfile xil_pn:name="MIPS_Datapath_map.mrp"/>
+      <outfile xil_pn:name="MIPS_Datapath_map.ncd"/>
+      <outfile xil_pn:name="MIPS_Datapath_map.ngm"/>
+      <outfile xil_pn:name="MIPS_Datapath_map.xrpt"/>
+      <outfile xil_pn:name="MIPS_Datapath_summary.xml"/>
+      <outfile xil_pn:name="MIPS_Datapath_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1370874170" xil_pn:in_ck="-9207087861886702913" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1370874144">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="MIPS_Datapath.ncd"/>
+      <outfile xil_pn:name="MIPS_Datapath.pad"/>
+      <outfile xil_pn:name="MIPS_Datapath.par"/>
+      <outfile xil_pn:name="MIPS_Datapath.ptwx"/>
+      <outfile xil_pn:name="MIPS_Datapath.unroutes"/>
+      <outfile xil_pn:name="MIPS_Datapath.xpi"/>
+      <outfile xil_pn:name="MIPS_Datapath_pad.csv"/>
+      <outfile xil_pn:name="MIPS_Datapath_pad.txt"/>
+      <outfile xil_pn:name="MIPS_Datapath_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1370874170" xil_pn:in_ck="-2404818102985228443" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1370874159">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="MIPS_Datapath.twr"/>
+      <outfile xil_pn:name="MIPS_Datapath.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
     </transform>
   </transforms>
 

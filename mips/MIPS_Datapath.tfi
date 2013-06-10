@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+MIPS_Datapath instance_name (
+    .clk(clk), 
+    .rst(rst), 
+    .TestPort(TestPort)
+    );
+
+

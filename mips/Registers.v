@@ -30,27 +30,23 @@ module Registers(
     output [31:0] ReadData2
     );
 
-	reg[31:0] regs[0:31];
-	reg[31:0] ReadData1;
-	reg[31:0] ReadData2;
+	reg[31:0] regs[1:31];
+	wire[31:0] ReadData1;
+	wire[31:0] ReadData2;
 
 	integer i;
 
-	//TODO: 0번 레지스터 일 경우 0을 출력하고 0번 레지스터에는 쓰기가 되지 않는다.
-	
-	always @(negedge clk & write)
-		regs[WriteRegister]=WriteData;
-	
-	always @(ReadRegister1 or write)
-		ReadData1=regs[ReadRegister1];
-	always @(ReadRegister2 or write)
-		ReadData2=regs[ReadRegister2];
-	
-	always @(negedge rst)
+	assign ReadData1 = (ReadRegister1==5'd0)?(32'd0):(regs[ReadRegister1]);
+	assign ReadData2 = (ReadRegister2==5'd0)?(32'd0):(regs[ReadRegister2]);
+
+	always @(posedge clk or negedge rst)
 	begin
 		if(!rst)
-			for(i=0; i<32; i=i+1)
+			for(i=1; i<32; i=i+1)
 				regs[i] <= 32'd0;
+		else
+			if(write)
+				regs[WriteRegister] <= WriteData;
 	end
 	
 endmodule

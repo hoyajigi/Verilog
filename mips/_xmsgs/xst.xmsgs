@@ -5,13 +5,34 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hlug\Documents\GitHub\Verilog\mips\Registers.v" Line 34: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData1</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\Registers.v" Line 34: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData1</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hlug\Documents\GitHub\Verilog\mips\Registers.v" Line 35: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData2</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\Registers.v" Line 35: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData2</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hlug\Documents\GitHub\Verilog\mips\MIPS_Datapath.v" Line 77: Redeclaration of ansi port <arg fmt="%s" index="1">TestPort</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\ControlUnit.v" Line 32: Redeclaration of ansi port <arg fmt="%s" index="1">WriteReg</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\ControlUnit.v" Line 33: Redeclaration of ansi port <arg fmt="%s" index="1">ALU_OP</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\ControlUnit.v" Line 40: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">6</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\ControlUnit.v" Line 42: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">6</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\ControlUnit.v" Line 44: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">6</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\ALUControl.v" Line 26: Redeclaration of ansi port <arg fmt="%s" index="1">Control</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\ALU.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">Out</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\MIPS_Datapath.v" Line 82: Redeclaration of ansi port <arg fmt="%s" index="1">TestPort</arg> is not allowed
 </msg>
 
 </messages>

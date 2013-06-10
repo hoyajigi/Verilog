@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/tb_MIPS_Datapath.xst" -ofn "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/tb_MIPS_Datapath.syr" 
