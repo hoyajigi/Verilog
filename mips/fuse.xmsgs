@@ -5,10 +5,46 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hlug/Documents/GitHub/Verilog/mips/Registers.v" Line 33: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData1</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/Registers.v" Line 34: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData1</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hlug/Documents/GitHub/Verilog/mips/Registers.v" Line 34: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData2</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/Registers.v" Line 35: Redeclaration of ansi port <arg fmt="%s" index="1">ReadData2</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 32: Redeclaration of ansi port <arg fmt="%s" index="1">WriteReg</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 33: Redeclaration of ansi port <arg fmt="%s" index="1">ALU_OP</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 40: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">6</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 42: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">6</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 44: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">6</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ALUControl.v" Line 26: Redeclaration of ansi port <arg fmt="%s" index="1">Control</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ALU.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">Out</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 52: Redeclaration of ansi port <arg fmt="%s" index="1">clk</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 159: Redeclaration of ansi port <arg fmt="%s" index="1">TestPort</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="188" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 148: Actual bit length <arg fmt="%d" index="1">2</arg> differs from formal bit length <arg fmt="%d" index="2">1</arg>
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 145: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">In1</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">5</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 85: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">ALU_OP</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
 </msg>
 
 </messages>

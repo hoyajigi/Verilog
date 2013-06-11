@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/tb_MIPS_Datapath_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_MIPS_Datapath" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/tb_MIPS_Datapath/TestPort" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">TestPort[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TestPort[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/cnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cnt[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/MIPS_Datapath/IMem/Data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Data[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/MIPS_Datapath/Reg/ReadRegister1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ReadRegister1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadRegister1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/MIPS_Datapath/Reg/ReadRegister2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ReadRegister2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ReadRegister2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/MIPS_Datapath/ControlUnit/OPCode" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OPCode[5:0]</obj_property>
+      <obj_property name="ObjectShortName">OPCode[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/MIPS_Datapath/SignExtend/In" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">In[15:0]</obj_property>
+      <obj_property name="ObjectShortName">In[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/MIPS_Datapath/Dst_Mux/In1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">In1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">In1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_MIPS_Datapath/MIPS_Datapath/Dst_Mux/In2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">In2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">In2[31:0]</obj_property>
+   </wvobject>
+</wave_config>

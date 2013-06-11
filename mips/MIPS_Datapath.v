@@ -23,7 +23,11 @@ module MIPS_Datapath(
     input rst,
     output [31:0] TestPort
     );
-
+ 	reg PCsrc;
+	always @(negedge rst)
+	begin
+		PCsrc = 1'b0;
+	end
 /* 명령어는 명령어 메모리에서 나오니까 명령어 메모리부터 시작해보자 */
 /* 명령어 메모리 시작 */
 	// Inputs
@@ -39,20 +43,20 @@ module MIPS_Datapath(
 
 /* 명령어 메모리 끝 */
 /* PC 시작 */
-	wire PCsrc;
+
 	// Wire
 	wire[31:0] Mux_Out;
 	wire[31:0] Adder_Out;
 	wire[31:0] BranchAdder_Out;
 	wire[31:0] LeftShiferOut;
-	
+	wire clk,rst;
 	PC PC (clk,rst,Mux_Out,Addr);
-	Adder PCAdder (Result,32'd4,Adder_Out);
+	Adder PCAdder (Addr,32'd4,Adder_Out);
 	Adder BranchAdder (Adder_Out,LeftShiferOut,BranchAdder_Out);
 	//TODO 나중에 0을 브랜치 주소로 바꾼다.
 	PC_Mux PC_Mux (PCsrc,Adder_Out,BranchAdder_Out,Mux_Out);
-	assign BranchAdder_Out=32'd0;
-	assign PCsrc = 1'b0;
+//	assign BranchAdder_Out=32'd0;
+//	assign PCsrc = 1'b0;
 	//Addr 연결함
 	//TODO Result는 브랜치 주소에도 쓰임
 /* PC 끝 */
@@ -107,7 +111,7 @@ module MIPS_Datapath(
 	reg[1:0] ALU_OP1;
 	
 	//일단 무조건 할당
-	always @(posedge clk or negedge rst)
+	always @(posedge clk)
 	begin
 		WriteReg1=WriteReg;
 		WriteReg2=WriteReg1;
@@ -141,7 +145,7 @@ module MIPS_Datapath(
 	PC_Mux Dst_Mux(DstReg1,Data[20:16],Data[15:11],WriteRegister);
 	PC_Mux ALU_Mux(ALUSrc1,ReadData2,SignExtendOut,In2);
 	PC_Mux M2R_Mux(MemToReg3,Out,Data2,WriteData);
-	AND Branch_AND(Branch2,Out[1:0],PCSrc);
+	and Branch_AND(PCSrc,Branch2,Out[1:0]);
 /* 레지스터 시작 */
 	wire [31:0] ReadData1;
 	

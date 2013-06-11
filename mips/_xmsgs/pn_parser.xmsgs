@@ -8,7 +8,40 @@
 <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ALU.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ALUControl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/Adder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/DataMemory.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/InstructionMemory.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/LeftShifter.v&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/PC.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/PC_Mux.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/Registers.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/SignExtend.v&quot; into library work</arg>
 </msg>
 
 </messages>

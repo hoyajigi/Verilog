@@ -1,21 +1,55 @@
-Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/hlug/Documents/GitHub/Verilog/mips/tb_Registers_isim_beh.exe -prj C:/Users/hlug/Documents/GitHub/Verilog/mips/tb_Registers_beh.prj work.tb_Registers work.glbl 
-ISim P.49d (signature 0x7708f090)
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/tb_MIPS_Datapath_isim_beh.exe" -prj "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/tb_MIPS_Datapath_beh.prj" "work.tb_MIPS_Datapath" "work.glbl" 
+ISim P.58f (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/hlug/Documents/GitHub/Verilog/mips/Registers.v" into library work
-WARNING:HDLCompiler:751 - "C:/Users/hlug/Documents/GitHub/Verilog/mips/Registers.v" Line 33: Redeclaration of ansi port ReadData1 is not allowed
-WARNING:HDLCompiler:751 - "C:/Users/hlug/Documents/GitHub/Verilog/mips/Registers.v" Line 34: Redeclaration of ansi port ReadData2 is not allowed
-Analyzing Verilog file "C:/Users/hlug/Documents/GitHub/Verilog/mips/tb_Registers.v" into library work
-Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/SignExtend.v" into library work
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/Registers.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/Registers.v" Line 34: Redeclaration of ansi port ReadData1 is not allowed
+WARNING:HDLCompiler:751 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/Registers.v" Line 35: Redeclaration of ansi port ReadData2 is not allowed
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/PC_Mux.v" into library work
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/PC.v" into library work
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/LeftShifter.v" into library work
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/InstructionMemory.v" into library work
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/DataMemory.v" into library work
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 32: Redeclaration of ansi port WriteReg is not allowed
+WARNING:HDLCompiler:751 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 33: Redeclaration of ansi port ALU_OP is not allowed
+WARNING:HDLCompiler:568 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 40: Constant value is truncated to fit in <6> bits.
+WARNING:HDLCompiler:568 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 42: Constant value is truncated to fit in <6> bits.
+WARNING:HDLCompiler:568 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ControlUnit.v" Line 44: Constant value is truncated to fit in <6> bits.
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ALUControl.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ALUControl.v" Line 26: Redeclaration of ansi port Control is not allowed
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ALU.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/ALU.v" Line 27: Redeclaration of ansi port Out is not allowed
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/Adder.v" into library work
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" into library work
+WARNING:HDLCompiler:751 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 52: Redeclaration of ansi port clk is not allowed
+WARNING:HDLCompiler:751 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 159: Redeclaration of ansi port TestPort is not allowed
+Analyzing Verilog file "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/tb_MIPS_Datapath.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
+WARNING:HDLCompiler:188 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 148: Actual bit length 2 differs from formal bit length 1
+WARNING:HDLCompiler:189 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 145: Size mismatch in connection of port <In1>. Formal port size is 32-bit while actual signal size is 5-bit.
+WARNING:HDLCompiler:189 - "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 85: Size mismatch in connection of port <ALU_OP>. Formal port size is 2-bit while actual signal size is 1-bit.
 Completed static elaboration
+Compiling module InstructionMemory
+Compiling module PC
+Compiling module Adder
+Compiling module PC_Mux
+Compiling module ControlUnit
 Compiling module Registers
-Compiling module tb_Registers
+Compiling module DataMemory
+Compiling module ALU
+Compiling module ALUControl
+Compiling module LeftShifter
+Compiling module SignExtend
+Compiling module MIPS_Datapath
+Compiling module tb_MIPS_Datapath
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 3 Verilog Units
-Built simulation executable C:/Users/hlug/Documents/GitHub/Verilog/mips/tb_Registers_isim_beh.exe
-Fuse Memory Usage: 30328 KB
-Fuse CPU Usage: 436 ms
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 14 Verilog Units
+Built simulation executable C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/tb_MIPS_Datapath_isim_beh.exe
+Fuse Memory Usage: 28104 KB
+Fuse CPU Usage: 342 ms

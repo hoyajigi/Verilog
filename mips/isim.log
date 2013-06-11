@@ -1,13 +1,53 @@
 ISim log file
-Running: C:\Users\hlug\Documents\GitHub\Verilog\mips\tb_Registers_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/hlug/Documents/GitHub/Verilog/mips/tb_Registers_isim_beh.wdb 
-ISim P.49d (signature 0x7708f090)
+Running: C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\tb_MIPS_Datapath_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/tb_MIPS_Datapath_isim_beh.wdb 
+ISim P.58f (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
+WARNING: File "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 85.  For instance MIPS_Datapath/ControlUnit/, width 2 of formal port ALU_OP is not equal to width 1 of actual signal ALU_OP.
+WARNING: For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port In1 is not equal to width 5 of actual.
+WARNING: For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port In2 is not equal to width 5 of actual.
+WARNING: File "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 138.  For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port Out is not equal to width 5 of actual signal WriteRegister.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.58f (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 85.  For instance MIPS_Datapath/ControlUnit/, width 2 of formal port ALU_OP is not equal to width 1 of actual signal ALU_OP.
+WARNING: For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port In1 is not equal to width 5 of actual.
+WARNING: For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port In2 is not equal to width 5 of actual.
+WARNING: File "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 138.  For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port Out is not equal to width 5 of actual signal WriteRegister.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.58f (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 85.  For instance MIPS_Datapath/ControlUnit/, width 2 of formal port ALU_OP is not equal to width 1 of actual signal ALU_OP.
+WARNING: For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port In1 is not equal to width 5 of actual.
+WARNING: For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port In2 is not equal to width 5 of actual.
+WARNING: File "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 138.  For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port Out is not equal to width 5 of actual signal WriteRegister.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.58f (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 85.  For instance MIPS_Datapath/ControlUnit/, width 2 of formal port ALU_OP is not equal to width 1 of actual signal ALU_OP.
+WARNING: For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port In1 is not equal to width 5 of actual.
+WARNING: For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port In2 is not equal to width 5 of actual.
+WARNING: File "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v" Line 138.  For instance MIPS_Datapath/Dst_Mux/, width 32 of formal port Out is not equal to width 5 of actual signal WriteRegister.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

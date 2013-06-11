@@ -13,3 +13,8 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 MIPS_Datap
 map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o MIPS_Datapath_map.ncd MIPS_Datapath.ngd MIPS_Datapath.pcf 
 par -w -intstyle ise -ol high -mt off MIPS_Datapath_map.ncd MIPS_Datapath.ncd MIPS_Datapath.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MIPS_Datapath.twx MIPS_Datapath.ncd -o MIPS_Datapath.twr MIPS_Datapath.pcf 
+xst -intstyle ise -ifn "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.xst" -ofn "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.syr" 
+xst -intstyle ise -ifn "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.xst" -ofn "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.syr" 
+xst -intstyle ise -ifn "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.xst" -ofn "C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.syr" 
+vhdtdtfi -lib work C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.v -lang verilog -prj mips -o MIPS_Datapath.spl -module MIPS_Datapath -template C:/Xilinx/14.5/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 MIPS_Datapath.spl C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/MIPS_Datapath.sym 
