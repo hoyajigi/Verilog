@@ -36,40 +36,40 @@ module MIPS_Datapath(
 		.Addr(Addr), 
 		.Data(Data)
 	);
+
 /* 명령어 메모리 끝 */
 /* PC 시작 */
-	reg PCsrc;
+	wire PCsrc;
 	// Wire
 	wire[31:0] Mux_Out;
 	wire[31:0] Adder_Out;
-
-	PC PC (clk,rst,Mux_Out,Addr);
-	Adder Adder (Result,32'd4,Adder_Out);
-	PC_Mux PC_Mux (PCsrc,Adder_Out,32'd0,Mux_Out);
+	wire[31:0] BranchAdder_Out;
+	wire[31:0] LeftShiferOut;
 	
-	initial begin
-		PCsrc = 1'b1;
-		#100 PCsrc = 1'b0;
-	end
+	PC PC (clk,rst,Mux_Out,Addr);
+	Adder PCAdder (Result,32'd4,Adder_Out);
+	Adder BranchAdder (Adder_Out,LeftShiferOut,BranchAdder_Out);
+	//TODO 나중에 0을 브랜치 주소로 바꾼다.
+	PC_Mux PC_Mux (PCsrc,Adder_Out,BranchAdder_Out,Mux_Out);
+	assign BranchAdder_Out=32'd0;
+	assign PCsrc = 1'b0;
+	//Addr 연결함
+	//TODO Result는 브랜치 주소에도 쓰임
 /* PC 끝 */
 
-
-	//Wires
-	
+/* 레지스터 시작 */
 	wire write;
-	wire [4:0] ReadRegister1;
-	wire [4:0] ReadRegister2;
 	wire [4:0] WriteRegister;
 	wire [31:0] WriteData;
 	wire [31:0] ReadData1;
 	wire [31:0] ReadData2;
-
 	
-	Registers Reg (.clk(clk),.rst(rst),.write(write), .ReadRegister1(ReadRegister1),
-		.ReadRegister2(ReadRegister2), .WriteRegister(WriteRegister), .WriteData(WriteData), 
+	Registers Reg (.clk(clk),.rst(rst),.write(write), .ReadRegister1(Data[25:21]),
+		.ReadRegister2(Data[20:16]), .WriteRegister(WriteRegister), .WriteData(WriteData), 
 		.ReadData1(ReadData1), .ReadData2(ReadData2));
 	
-	
+/* 레지스터 끝 */
+
 /* 데이터 메모리 시작 */
 	// Inputs
 	wire ReadMem;
@@ -111,7 +111,7 @@ module MIPS_Datapath(
 	);
 /* ALU 끝 */
 
-/*  */
+/* ALUControl 시작 */
 // Inputs
 	wire [5:0] ALUControlIn;
 	wire [1:0] ALU_OP;
@@ -125,12 +125,9 @@ module MIPS_Datapath(
 		.ALU_OP(ALU_OP), 
 		.Control(Control)
 	);
-/*  */
+/* ALUControl 끝 */
 
-/*  */
-// Inputs
-	reg [5:0] OPCode;
-
+/* ControlUnit 시작 */
 	// Outputs
 	wire WriteReg;
 	wire MemToReg;
@@ -142,7 +139,7 @@ module MIPS_Datapath(
 
 	// Instantiate the Unit Under Test (UUT)
 	ControlUnit ControlUnit (
-		.OPCode(OPCode), 
+		.OPCode(Data[31:26]), 
 		.WriteReg(WriteReg), 
 		.MemToReg(MemToReg), 
 		.Branch(Branch), 
@@ -152,33 +149,24 @@ module MIPS_Datapath(
 		.ALUSrc(ALUSrc), 
 		.ALU_OP(ALU_OP)
 	);
-/*  */
+/* ControlUnit 끝 */
 
-/*  */
-// Inputs
-	wire [31:0] LeftShiferIn;
-
+/* LeftShifer 시작 */
+	wire [31:0] SignExtendOut;
 	// Outputs
-	wire [31:0] LeftShiferOut;
+	
 
 	// Instantiate the Unit Under Test (UUT)
 	LeftShifter LeftShifer (
-		.In(LeftShiferIn), 
+		.In(SignExtendOut), 
 		.Out(LeftShiferOut)
 	);
-/*  */
+/* LeftShifer 끝 */
 
-/*  */
-// Inputs
-	reg [15:0] SignExtendIn;
-
-	// Outputs
-	wire [31:0] SignExtendOut;
-
-	// Instantiate the Unit Under Test (UUT)
+/* SignExtend 시작 */
 	SignExtend SignExtend (
-		.In(SignExtendIn), 
+		.In(Data[15:0]), 
 		.Out(SignExtendOut)
 	);
-/*  */
+/* SignExtend 끝 */
 endmodule

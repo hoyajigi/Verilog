@@ -32,7 +32,7 @@
 <msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\ALU.v" Line 27: Redeclaration of ansi port <arg fmt="%s" index="1">Out</arg> is not allowed
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\MIPS_Datapath.v" Line 82: Redeclaration of ansi port <arg fmt="%s" index="1">TestPort</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="751" delta="old" >"C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\MIPS_Datapath.v" Line 84: Redeclaration of ansi port <arg fmt="%s" index="1">TestPort</arg> is not allowed
 </msg>
 
 </messages>

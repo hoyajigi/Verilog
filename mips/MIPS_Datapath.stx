@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to C:/Users/hoyajigi/Documents/GitHub/Verilog/mips/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: MIPS_Datapath.prj
 
@@ -39,6 +39,8 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\SignExtend.v" into library work
+Parsing module <SignExtend>.
 Analyzing Verilog file "C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\Registers.v" into library work
 Parsing module <Registers>.
 WARNING:HDLCompiler:751 - "C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\Registers.v" Line 34: Redeclaration of ansi port ReadData1 is not allowed
@@ -70,15 +72,15 @@ Analyzing Verilog file "C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\Adder.v"
 Parsing module <Adder>.
 Analyzing Verilog file "C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\MIPS_Datapath.v" into library work
 Parsing module <MIPS_Datapath>.
-WARNING:HDLCompiler:751 - "C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\MIPS_Datapath.v" Line 82: Redeclaration of ansi port TestPort is not allowed
+WARNING:HDLCompiler:751 - "C:\Users\hoyajigi\Documents\GitHub\Verilog\mips\MIPS_Datapath.v" Line 84: Redeclaration of ansi port TestPort is not allowed
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.19 secs
+Total CPU time to Xst completion: 4.17 secs
  
 --> 
 
-Total memory usage is 211980 kilobytes
+Total memory usage is 211596 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   10 (   0 filtered)
