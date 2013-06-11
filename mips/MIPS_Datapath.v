@@ -57,75 +57,6 @@ module MIPS_Datapath(
 	//TODO Result는 브랜치 주소에도 쓰임
 /* PC 끝 */
 
-/* 레지스터 시작 */
-	wire write;
-	wire [4:0] WriteRegister;
-	wire [31:0] WriteData;
-	wire [31:0] ReadData1;
-	wire [31:0] ReadData2;
-	
-	Registers Reg (.clk(clk),.rst(rst),.write(write), .ReadRegister1(Data[25:21]),
-		.ReadRegister2(Data[20:16]), .WriteRegister(WriteRegister), .WriteData(WriteData), 
-		.ReadData1(ReadData1), .ReadData2(ReadData2));
-	
-/* 레지스터 끝 */
-
-/* 데이터 메모리 시작 */
-	// Inputs
-	wire ReadMem;
-	wire WriteMem;
-	wire [31:0] DataAddr;
-	wire [31:0] Data_i;
-
-	// Outputs
-	wire [31:0] Data2;
-	wire [31:0] TestPort;
-	
-//clk,ReadMem,WriteMem,Addr,Data_i,Data,TestPort
-	DataMemory DMem (
-		.clk(clk), 
-		.ReadMem(ReadMem), 
-		.WriteMem(WriteMem), 
-		.Addr(DataAddr), 
-		.Data_i(Data_i), 
-		.Data(Data2), 
-		.TestPort(TestPort)
-	);
-/* 데이터 메모리 끝 */
-
-/* ALU 시작 */
-// Inputs
-	reg [31:0] In1;
-	reg [31:0] In2;
-	reg [2:0] ControlSignal;
-
-	// Outputs
-	wire [31:0] Out;
-
-	// Instantiate the Unit Under Test (UUT)
-	ALU ALU (
-		.In1(In1), 
-		.In2(In2), 
-		.ControlSignal(ControlSignal), 
-		.Out(Out)
-	);
-/* ALU 끝 */
-
-/* ALUControl 시작 */
-// Inputs
-	wire [5:0] ALUControlIn;
-	wire [1:0] ALU_OP;
-
-	// Outputs
-	wire [2:0] Control;
-
-	// Instantiate the Unit Under Test (UUT)
-	ALUControl ALUControl (
-		.In(ALUControlIn), 
-		.ALU_OP(ALU_OP), 
-		.Control(Control)
-	);
-/* ALUControl 끝 */
 
 /* ControlUnit 시작 */
 	// Outputs
@@ -149,24 +80,97 @@ module MIPS_Datapath(
 		.ALUSrc(ALUSrc), 
 		.ALU_OP(ALU_OP)
 	);
+
 /* ControlUnit 끝 */
 
-/* LeftShifer 시작 */
-	wire [31:0] SignExtendOut;
-	// Outputs
+/* 빠이쁘라이닝을 위한 거시기들 시작 */
+	//WB1
+	reg WriteReg1;
+	reg MemToReg1;
+	//WB2
+	reg WriteReg2;
+	reg MemToReg2;
+	//WB3
+	reg WriteReg3;
+	reg MemToReg3;
+	//MEM1
+	reg Branch1;
+	reg ReadMemSig1;
+	reg WriteMemSig1;
+	//MEM2
+	reg Branch2;
+	reg ReadMemSig2;
+	reg WriteMemSig2;
+	//EX1
+	reg DstReg1;
+	reg ALUSrc1;
+	reg[1:0] ALU_OP1;
 	
+	//일단 무조건 할당
+	always @(posedge clk or negedge rst)
+	begin
+		WriteReg1=WriteReg;
+		WriteReg2=WriteReg1;
+		WriteReg3=WriteReg2;
+	
+		MemToReg1=MemToReg;
+		MemToReg2=MemToReg1;
+		MemToReg3=MemToReg2;
 
-	// Instantiate the Unit Under Test (UUT)
-	LeftShifter LeftShifer (
-		.In(SignExtendOut), 
-		.Out(LeftShiferOut)
-	);
-/* LeftShifer 끝 */
+		Branch1=Branch;
+		Branch2=Branch1;
 
-/* SignExtend 시작 */
-	SignExtend SignExtend (
-		.In(Data[15:0]), 
-		.Out(SignExtendOut)
+		ReadMemSig1=ReadMemSig;
+		ReadMemSig2=ReadMemSig1;
+
+		WriteMemSig1=WriteMemSig;
+		WriteMemSig2=WriteMemSig1;
+
+		DstReg1=DstReg;
+		ALUSrc1=ALUSrc;
+		ALU_OP1=ALU_OP;
+	end
+/* 빠이쁘라이닝을 위한 거시기들 끝 */
+	wire [4:0] WriteRegister;
+	wire [31:0] ReadData2;
+	wire [31:0] In2;
+	wire [31:0] SignExtendOut;
+	wire [31:0] Out;
+	wire [31:0] Data2;
+	wire [31:0] WriteData;
+	PC_Mux Dst_Mux(DstReg1,Data[20:16],Data[15:11],WriteRegister);
+	PC_Mux ALU_Mux(ALUSrc1,ReadData2,SignExtendOut,In2);
+	PC_Mux M2R_Mux(MemToReg3,Out,Data2,WriteData);
+	AND Branch_AND(Branch2,Out[1:0],PCSrc);
+/* 레지스터 시작 */
+	wire [31:0] ReadData1;
+	
+	Registers Reg (.clk(clk),.rst(rst),.write(WriteReg3), .ReadRegister1(Data[25:21]),
+		.ReadRegister2(Data[20:16]), .WriteRegister(WriteRegister), .WriteData(WriteData), 
+		.ReadData1(ReadData1), .ReadData2(ReadData2));
+	
+/* 레지스터 끝 */
+
+/* 데이터 메모리 시작 */
+	wire [31:0] TestPort;
+	
+	DataMemory DMem (
+		.clk(clk), 
+		.ReadMem(ReadMemSig2), 
+		.WriteMem(WriteMemSig2), 
+		.Addr(Out), 
+		.Data_i(ReadData2), 
+		.Data(Data2), 
+		.TestPort(TestPort)
 	);
-/* SignExtend 끝 */
+/* 데이터 메모리 끝 */
+
+/* ALU 시작 */
+	wire [2:0] Control;
+	ALU ALU (.In1(ReadData1),.In2(In2),.ControlSignal(Control), .Out(Out));
+/* ALU 끝 */
+
+	ALUControl ALUControl (.In(SignExtendOut[5:0]), .ALU_OP(ALU_OP1), .Control(Control));
+	LeftShifter LeftShifer(.In(SignExtendOut), .Out(LeftShiferOut));
+	SignExtend SignExtend (.In(Data[15:0]), .Out(SignExtendOut));
 endmodule
